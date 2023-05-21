@@ -17,7 +17,6 @@ class CheckAuthScreen extends StatelessWidget {
             if (!snapshot.hasData) return const Text('Espere...');
 
             Future.microtask(() {
-              print('TOKEN: ${snapshot.data}');
               Navigator.of(context).pushReplacementNamed(snapshot.data == '' ? 'login' : 'home');
             });
 
